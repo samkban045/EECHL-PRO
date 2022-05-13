@@ -165,7 +165,7 @@ class CloneHelper:
         idd = "{" f"{self.g_id}" "}"
         cmd = [
             "/app/gautam/gclone",
-            "copy",
+            "copyto",
             "--config=rclone.conf",
             f"{self.dname}:{idd}",
             f"{self.dname}:{destination}/{self.name}",
