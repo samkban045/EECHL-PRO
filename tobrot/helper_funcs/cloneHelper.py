@@ -169,7 +169,7 @@ class CloneHelper:
             "--config=rclone.conf",
             f"{self.dname}:{idd}",
             f"{self.dname}:{destination}/{self.name}",
-            "-v",
+            "-P",
             "--drive-server-side-across-configs",
             "--transfers=16",
             "--checkers=20",
