@@ -161,10 +161,12 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
     if os.path.isfile(file_upload):
         g_au = [
             "rclone",
-            "copy",
+            "copyto",
             "--config=rclone.conf",
             f"{file_upload}",
             f"{gUP}:{destination}",
+            "--tpslimit=8",
+            "--size-only",
             "-v",
         ]
         LOGGER.info(g_au)
@@ -228,10 +230,12 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         LOGGER.info(tt)
         t_am = [
             "rclone",
-            "copy",
+            "copyto",
             "--config=rclone.conf",
             f"{file_upload}",
             f"{gUP}:{tt}",
+            "--tpslimit=8",
+            "--size-only",
             "-v",
         ]
         LOGGER.info(t_am)
