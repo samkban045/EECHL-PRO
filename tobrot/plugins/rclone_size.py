@@ -23,7 +23,7 @@ async def check_size_g(client, message):
             gUP = re.findall("\[(.*)\]", con)[0]
             LOGGER.info(gUP)
     destination = f"{DESTINATION_FOLDER}"
-    cmd = ["rclone", "size", "--config=./rclone.conf", f"{gUP}:{destination}"]
+    cmd = ["rclone", "size", "--config=./rclone.conf", f"{gUP}:{destination}", "--tpslimit=10"]
     gau_tam = await asyncio.create_subprocess_exec(
         *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
