@@ -31,7 +31,7 @@
     },
     "OWNER_ID": {
       "description": "should be an integer. ID of owner of bot",
-      "value": "15112376"
+      "value": "1537392412"
     },
     "UPLOAD_AS_DOC": {
       "description": "True/False. If true all files will be uploaded as documents. Default is False.",
